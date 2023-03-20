@@ -1,10 +1,14 @@
+
 ---
--name: first playbook
- hosts: all
- tasks:
-   -name: create a new file 
-    file: 
-      path : /tmp/foo.conf
-      mode: 0664
-      owner: kaoutar
-      state: touch
+
+- name:  playbook
+  hosts: node0
+  tasks:
+   - name: create a new file
+     file:
+       path : /home/kaoutar/plays
+       mode: 0664
+       owner: kaoutar
+       state: touch
+
+
