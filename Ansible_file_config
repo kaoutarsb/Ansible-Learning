@@ -1,0 +1,15 @@
+defaults]
+inventory = myhosts
+
+#remoteuser:specifies the user who will connect to the managed hosts & run playbooks
+remote_user = kaoutar
+
+#host_key_checking to turn on/off SSH key
+host_key_checking = false
+
+[privilege_escalation]
+# true : to activate privilege escalation 
+become = true
+become_method = sudo
+become_user = root
+become_ack_pass= false
