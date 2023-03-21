@@ -16,7 +16,7 @@
   tasks:
      - name: Show 2nd item in port_nums
        debug:
-         msg: SSH port ={{port-nums[1]}}
+         msg: SSH port ={{port_nums[1]}}
 
      - name : Show uid of kaoutar
        debug:
