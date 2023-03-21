@@ -13,3 +13,11 @@
          username: sabri
          uid: 1001
          shell: /bin/bash 
+  tasks:
+     - name: Show 2nd item in port_nums
+       debug:
+         msg: SSH port ={{port-nums[1]}}
+
+     - name : Show uid of kaoutar
+       debug:
+          msg: uid of kaoutar is {{users.admin1.uid}}       
