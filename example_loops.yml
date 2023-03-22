@@ -1,0 +1,38 @@
+
+---
+- name: Print a list using a loop
+  hosts: node0
+  vars:
+    list: [1,2,3,4,5,6,7,8]
+  tasks:
+    - name: Show the eight numbers
+      debug:
+         msg: "{{ item }}"
+      loop: "{{ list}}"
+    
+    
+#Resultat du lancement du playbook :
+    #ok: [node0] => (item=1) => {
+    #"msg": 1
+#}
+#ok: [node0] => (item=2) => {
+ #   "msg": 2
+#}
+##ok: [node0] => (item=3) => {
+##    "msg": 3
+#}
+#####ok: [node0] => (item=4) => {
+ ####   "msg": 4
+###}
+##ok: [node0] => (item=5) => {
+ #   "msg": 5
+#}
+#ok: [node0] => (item=6) => {
+ #   "msg": 6
+#}
+#ok: [node0] => (item=7) => {
+#    "msg": 7
+#}
+#ok: [node0] => (item=8) => {
+#    "msg": 8
+#}
