@@ -1,8 +1,8 @@
---
+---
 - name: Using when with facts
   hosts: node0
   tasks:
-    - name: Detect Ubuntu Servers
+    - name: Detect CentOS Servers
       debug:
          msg: "This is a CentOS Server."
       when: ansible_facts['distribution'] == "CentOS"
