@@ -20,7 +20,7 @@
 #failed – if a task failed or not, it has true or false values
 #RC – return code
 #start – start date and time of a task
-#stderr – the standard error message in a single line
+#stderr – any errors
 #stderr_lines – the standard error message in separate lines
 #stdout – the output in a single line
 #stdout_lines – the output in separate lines
