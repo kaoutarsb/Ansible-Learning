@@ -1,0 +1,26 @@
+
+---
+- name: Register Playbook
+  hosts: node0
+  tasks:
+    - name: Run a command
+      command: uptime
+      register: server_uptime
+    - name: Show the server uptime
+      debug:
+        msg: "{{ server_uptime.stdout }}"
+
+
+#-------------------------------------------Other commands for register commands:-----------------------------------------------------------
+
+#changed – this will be true or false based on the state of remote hosts if the state changed then it will contain true, else it will contain
+#cmd – This is a command which ran on the remote host
+#delta – the time taken to execute the command
+#end – end date and time when the task completed
+#failed – if a task failed or not, it has true or false values
+#RC – return code
+#start – start date and time of a task
+#stderr – the standard error message in a single line
+#stderr_lines – the standard error message in separate lines
+#stdout – the output in a single line
+#stdout_lines – the output in separate lines
