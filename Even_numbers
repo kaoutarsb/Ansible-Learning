@@ -1,0 +1,11 @@
+
+---
+- name: Print some numbers
+  hosts: node0
+  tasks:
+   - name: print Even numbers
+     debug:
+       msg: Number {{ item }} is Even
+     loop: "{{ range(10) | list }}"
+     when: item % 2 == 0
+
