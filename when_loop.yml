@@ -1,0 +1,12 @@
+ #test to see whether a variable has been set or not; for example, the
+ #following task will only run if the car variable is defined: 
+---
+- name: Test if a variables is set or not
+  hosts: node0
+  vars:
+    car: Ford fiesta
+  tasks:
+    - name: Run only if you got a car
+      debug:
+         msg: "Let's go on a road trip ..."
+      when: car is defined
