@@ -1,0 +1,15 @@
+
+---
+- name: linefile example
+  hosts: node0
+  tasks:
+   - name: example of the lineinfile & remove line
+     lineinfile:
+       dest: /home/kaoutar/test.txt
+       line: line added
+       state: present
+       create: yes
+
+
+
+# the test.txt should be created in the node0
