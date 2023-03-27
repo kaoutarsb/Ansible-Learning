@@ -1,0 +1,17 @@
+---
+- name: Ansislble playbook to test the block in file module with handlers.
+  hosts: node0
+  tasks:
+       - name: SSH config
+         blockinfile:
+           path: /etc/ssh/sshd_config
+           block: |
+             Match User ansible-agent
+             PasswordAuthentication no
+         notify: restart ssh
+
+  handlers:
+           - name: restart ssh
+             service:
+                name: sshd
+                state: restarted
